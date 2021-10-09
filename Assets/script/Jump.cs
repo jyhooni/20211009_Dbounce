@@ -5,7 +5,7 @@ using UnityEngine;
 public class Jump : MonoBehaviour
 {
     private Rigidbody2D rb;
-    private float jumpforce = 600f;
+    private float jumpforce = 40f;
 
     private void Start()
     {
@@ -16,14 +16,14 @@ public class Jump : MonoBehaviour
     {
         // if(Input.GetMouseButtonDown(0))
         //{
-        rb.AddForce(new Vector2(50f, jumpforce));
+        rb.AddForce(new Vector2(40f, jumpforce));
         //}
     }
     public void jumpleft()
     {
         // if(Input.GetMouseButtonDown(0))
         //{
-        rb.AddForce(new Vector2(-50f, jumpforce));
+        rb.AddForce(new Vector2(-40f, jumpforce));
         //}
     }
 

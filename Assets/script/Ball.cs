@@ -62,7 +62,7 @@ public class Ball : MonoBehaviour
 			hiCoinCount = PlayerPrefs.GetInt("HighCoin");
 		}
 
-
+		rb = GetComponent<Rigidbody2D>();
 		//
 		//Camera = GameObject.Find("Camera").GetComponent<Camera>();
 
@@ -185,10 +185,27 @@ public class Ball : MonoBehaviour
 	}
 
 
-
-
-
-
+		
+	private float jumpforce = 600f;
 
 	
+
+	public void jumpright()
+	{
+		// if(Input.GetMouseButtonDown(0))
+		//{
+		rb.AddForce(new Vector2(50f, jumpforce));
+		//}
+	}
+	public void jumpleft()
+	{
+		// if(Input.GetMouseButtonDown(0))
+		//{
+		rb.AddForce(new Vector2(-50f, jumpforce));
+		//}
+	}
+
+
+
+
 }

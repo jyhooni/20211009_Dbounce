@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
 
 
 
-	public Trajectory trajectory;
+	//public Trajectory trajectory;
 	[SerializeField] float pushForce = 8f;
 
 	bool isDragging = false;
@@ -222,11 +222,11 @@ public class GameManager : MonoBehaviour
 	void OnDragStart()
 	{
 		//공이 멈추게 만들어버림.
-		ball.DesactivateRb();
+		//ball.DesactivateRb();
 		startPoint = cam.ScreenToWorldPoint(Input.mousePosition);
 
 		//공 점점커지는게 보인다. 
-		trajectory.Show();
+		//trajectory.Show();
 	}
 
 	void OnDrag()
@@ -240,7 +240,7 @@ public class GameManager : MonoBehaviour
 		//Debug.DrawLine(startPoint, endPoint);
 
 
-		trajectory.UpdateDots(ball.pos, force);
+		//trajectory.UpdateDots(ball.pos, force);
 	}
 
 	void OnDragEnd()
@@ -250,7 +250,7 @@ public class GameManager : MonoBehaviour
 
 		ball.Push(force);
 
-		trajectory.Hide();
+		//trajectory.Hide();
 	}
 
 	public void retry()
